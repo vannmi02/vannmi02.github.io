@@ -82,3 +82,56 @@ table, th, td{
 .imageOfSelf{
   width: 100%;
 }
+
+.high{
+  background-color: red;
+  height: 100px;
+  overflow: auto;
+}
+
+.medium{
+  background-color: orange;
+  height: 100px;
+  overflow: auto;
+}
+
+.low{
+  background-color: gray;
+  height: 100px;
+  overflow: auto;
+}
+
+.done{
+  background-color: black;
+  height: 100px;
+  overflow: auto;
+}
+
+.done>h3{
+  color: white;
+}
+
+.high>ul{
+  text-shadow: 0px 0px 10px black;
+  color: white;
+  margin: 0;
+}
+
+.medium>ul{
+  text-shadow: 0px 0px 10px black;
+  color: white;
+  margin: 0;
+}
+
+.low>ul{
+  text-shadow: 0px 0px 10px black;
+  color: black;
+  margin: 0;
+}
+
+.done>ul{
+  text-decoration: line-through;
+  text-shadow: 0px 0px 10px blue;
+  color: cyan;
+  margin: 0;
+}
