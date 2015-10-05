@@ -40,6 +40,10 @@ nav{
   margin-right: 10px;
   border-radius: 5px;
   color: #e7e8e8;
+  
+  animation-name: wobble;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 span{
@@ -134,4 +138,9 @@ table, th, td{
   text-shadow: 0px 0px 10px blue;
   color: cyan;
   margin: 0;
+}
+
+@keyframes wobble {
+  from { transform: rotate(-30deg);}
+  to {transform: rotate(30deg);}
 }
