@@ -44,6 +44,7 @@ nav{
   animation-name: wobble;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 span{
@@ -141,6 +142,6 @@ table, th, td{
 }
 
 @keyframes wobble {
-  from { transform: rotate(-30deg);}
-  to {transform: rotate(30deg);}
+  from { transform: rotate(-15deg);}
+  to {transform: rotate(15deg);}
 }
