@@ -45,6 +45,7 @@ nav{
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 span{
