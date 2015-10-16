@@ -1,0 +1,29 @@
+body{
+  margin: 0;
+}
+
+header{
+  text-align: center;
+}
+
+#taskList{
+  list-style: none;
+}
+
+#displayBox{
+  background-color: tan;
+  margin: 0 auto;
+  width: 700px;
+  height: 375px;
+  overflow: scroll;
+}
+
+#commandBox{
+  background-color: tan;
+  width: 700px;
+  margin: 30px auto 0 auto;
+}
+
+#commandInput{
+  width: 200px;
+}
