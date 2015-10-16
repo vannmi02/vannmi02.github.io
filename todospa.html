@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>ToDo SPA</title>
+  <link rel='stylesheet' href='todospa.css' type='text/css' />
+</head>
+<body>
+  <header><h1>Busy Busy</h1></header>
+  <div id='displayBox'>
+    <ul id='taskList'>
+    </ul>
+  </div>
+  <div id='commandBox'>
+    Enter Task
+    <input id='commandInput' value='enter task here'></input>
+    <select id='dropdown'>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+    <button id='commandButton' onclick='createTask();'>New</button>
+  </div>
+
+
+
+ <script src='todospa.js'></script>
+</body>
+</html>
