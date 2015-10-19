@@ -22,7 +22,7 @@ function createTask(){
   else if(priority === 'Medium'){
     newLi.style.color = 'yellow';
   }
-  else//(priority === 'Low')
+  else//(priority === 'Low') 
   {
     newLi.style.color = 'green';
   }
