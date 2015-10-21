@@ -9,32 +9,33 @@ function createTask(){
   var newInput = document.createElement('input');
   newLi.appendChild(newInput);
   newInput.type = 'checkbox';
-  newLi.innerHTML += taskText;
+  var newText = document.createElement('textnode');
+  newText.innerHTML = taskText;
+  newLi.appendChild(newText);
 
-  newLi.onchange = other;
-  newLi.count = 0;
+  newInput.onclick = strikethrough;
+  newInput.count = 0;
 
   var dropdown = document.querySelector('#dropdown');
   var priority = dropdown.value;
   if(priority === 'High'){
-    newLi.style.color = 'red';
+    newLi.classList.add('high');
   }
   else if(priority === 'Medium'){
-    newLi.style.color = 'yellow';
+    newLi.classList.add('medium');
   }
-  else//(priority === 'Low') 
+  else//(priority === 'Low')
   {
-    newLi.style.color = 'green';
+    newLi.classList.add('low');
   }
 }
 
-
-function other(){
+function strikethrough(){
   this.count++;
   if(this.count % 2 !== 0){
-    this.style.textDecoration = 'line-through';
+    this.parentNode.classList.add('done');
   }
   else{
-    this.style.textDecoration = 'none';
+    this.parentNode.classList.remove('done');
   }
 }
