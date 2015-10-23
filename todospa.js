@@ -25,13 +25,14 @@ function createTask(){
 }
 
 function strikethrough(){
-  if(this.checked){
+  /*if(this.checked){
     this.parentNode.classList.add('done');
   }
   else{
     this.parentNode.classList.remove('done');
   }
   localSave('taskList');
-}
+}*/
+this.parentNode.classList.toggle('done');
 
 window.onload = function(){restoreList('taskList', strikethrough);};
