@@ -5,7 +5,7 @@ function createTask(){
 
   var taskText = commandInput.value;
   var newLi = document.createElement('li');
-  taskList.appendChild(newLi);
+
   var newInput = document.createElement('input');
   newLi.appendChild(newInput);
   newInput.type = 'checkbox';
@@ -14,28 +14,24 @@ function createTask(){
   newLi.appendChild(newText);
 
   newInput.onclick = strikethrough;
-  newInput.count = 0;
 
   var dropdown = document.querySelector('#dropdown');
   var priority = dropdown.value;
-  if(priority === 'High'){
-    newLi.classList.add('high');
-  }
-  else if(priority === 'Medium'){
-    newLi.classList.add('medium');
-  }
-  else//(priority === 'Low')
-  {
-    newLi.classList.add('low');
-  }
+  newLi.classList.add(priority);
+  // console.log(newLi.classList);
+  // console.log(newLi.classList[0]);
+  taskList.appendChild(newLi);
+  localSave('taskList');
 }
 
 function strikethrough(){
-  this.count++;
-  if(this.count % 2 !== 0){
+  if(this.checked){
     this.parentNode.classList.add('done');
   }
   else{
     this.parentNode.classList.remove('done');
   }
+  localSave('taskList');
 }
+
+window.onload = function(){restoreList('taskList', strikethrough);};
