@@ -27,3 +27,19 @@ header{
 #commandInput{
   width: 200px;
 }
+
+.High{
+  color: red;
+}
+
+.Medium{
+  color: yellow;
+}
+
+.Low{
+  color: green;
+}
+
+.done{
+  text-decoration: line-through;
+}
