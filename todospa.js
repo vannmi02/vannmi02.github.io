@@ -30,9 +30,9 @@ function strikethrough(){
   }
   else{
     this.parentNode.classList.remove('done');
-  }
+  }*/
+  this.parentNode.classList.toggle('done');
   localSave('taskList');
-}*/
-this.parentNode.classList.toggle('done');
+}
 
 window.onload = function(){restoreList('taskList', strikethrough);};
